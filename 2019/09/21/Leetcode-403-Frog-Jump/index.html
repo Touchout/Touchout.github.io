@@ -55,21 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="Introduction A .gdbinit script make GDB shows a visual dashboard of  source code memory register userdefined watch expression   Get from here: https://github.com/cyrus-and/gdb-dashboard Demostration:">
-<meta name="keywords" content="GDB">
+  <meta name="description" content="思路： DFS + Prune 目標是跳到最後一個石頭 N 假設最後一步是從第  X 個石頭 (X= 1, 2, 3…N-1） 跳到第 N 個石頭，是否有可能？ 若 （第 N 個石頭與第 X 個石頭的距離差） &amp;lt; （第 X 個石頭的位置），就有可能   對於每個可能的石頭 X 取其與第 N 個石頭的距離為 K (stones[N] - stones[X]) 再往前考慮 是否能從第 Y 個石頭">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GDB Dashboard">
-<meta property="og:url" content="http://yoursite.com/2019/09/21/GDB-Dashboard/index.html">
+<meta property="og:title" content="Leetcode#403 Frog Jump">
+<meta property="og:url" content="http://yoursite.com/2019/09/21/Leetcode-403-Frog-Jump/index.html">
 <meta property="og:site_name" content="KF&#39;s Notes">
-<meta property="og:description" content="Introduction A .gdbinit script make GDB shows a visual dashboard of  source code memory register userdefined watch expression   Get from here: https://github.com/cyrus-and/gdb-dashboard Demostration:">
+<meta property="og:description" content="思路： DFS + Prune 目標是跳到最後一個石頭 N 假設最後一步是從第  X 個石頭 (X= 1, 2, 3…N-1） 跳到第 N 個石頭，是否有可能？ 若 （第 N 個石頭與第 X 個石頭的距離差） &amp;lt; （第 X 個石頭的位置），就有可能   對於每個可能的石頭 X 取其與第 N 個石頭的距離為 K (stones[N] - stones[X]) 再往前考慮 是否能從第 Y 個石頭">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://i.imgur.com/6TIKXh0.png">
-<meta property="og:updated_time" content="2019-09-21T08:01:49.899Z">
+<meta property="og:updated_time" content="2019-09-21T08:07:12.909Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GDB Dashboard">
-<meta name="twitter:description" content="Introduction A .gdbinit script make GDB shows a visual dashboard of  source code memory register userdefined watch expression   Get from here: https://github.com/cyrus-and/gdb-dashboard Demostration:">
-<meta name="twitter:image" content="http://i.imgur.com/6TIKXh0.png">
-  <link rel="canonical" href="http://yoursite.com/2019/09/21/GDB-Dashboard/">
+<meta name="twitter:title" content="Leetcode#403 Frog Jump">
+<meta name="twitter:description" content="思路： DFS + Prune 目標是跳到最後一個石頭 N 假設最後一步是從第  X 個石頭 (X= 1, 2, 3…N-1） 跳到第 N 個石頭，是否有可能？ 若 （第 N 個石頭與第 X 個石頭的距離差） &amp;lt; （第 X 個石頭的位置），就有可能   對於每個可能的石頭 X 取其與第 N 個石頭的距離為 K (stones[N] - stones[X]) 再往前考慮 是否能從第 Y 個石頭">
+  <link rel="canonical" href="http://yoursite.com/2019/09/21/Leetcode-403-Frog-Jump/">
 
 
 <script id="page-configurations">
@@ -83,7 +81,7 @@
   };
 </script>
 
-  <title>GDB Dashboard | KF's Notes</title>
+  <title>Leetcode#403 Frog Jump | KF's Notes</title>
   
 
 
@@ -231,7 +229,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/21/GDB-Dashboard/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/21/Leetcode-403-Frog-Jump/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="KF">
@@ -243,7 +241,7 @@
       <meta itemprop="name" content="KF's Notes">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">GDB Dashboard
+        <h1 class="post-title" itemprop="name headline">Leetcode#403 Frog Jump
 
           
         </h1>
@@ -259,12 +257,25 @@
                 
               
 
-              <time title="Created: 2019-09-21 14:50:40 / Modified: 16:01:49" itemprop="dateCreated datePublished" datetime="2019-09-21T14:50:40+08:00">2019-09-21</time>
+              <time title="Created: 2019-09-21 15:10:26 / Modified: 16:07:12" itemprop="dateCreated datePublished" datetime="2019-09-21T15:10:26+08:00">2019-09-21</time>
             </span>
           
             
 
             
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -278,7 +289,7 @@
       
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2019/09/21/GDB-Dashboard/#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/21/GDB-Dashboard/" itemprop="commentCount"></span></a>
+    <a title="disqus" href="/2019/09/21/Leetcode-403-Frog-Jump/#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/21/Leetcode-403-Frog-Jump/" itemprop="commentCount"></span></a>
   </span>
   
   
@@ -292,29 +303,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><ul>
-<li>A .gdbinit script make GDB shows a visual dashboard of <ul>
-<li>source code</li>
-<li>memory</li>
-<li>register</li>
-<li>userdefined watch expression</li>
+        <h3 id="思路：-DFS-Prune"><a href="#思路：-DFS-Prune" class="headerlink" title="思路： DFS + Prune"></a>思路： DFS + Prune</h3><ol>
+<li>目標是跳到最後一個石頭 N</li>
+<li>假設最後一步是從第  X 個石頭 (X= 1, 2, 3…N-1） 跳到第 N 個石頭，是否有可能？<ul>
+<li>若 （第 N 個石頭與第 X 個石頭的距離差） &lt; （第 X 個石頭的位置），就有可能</li>
 </ul>
 </li>
-<li>Get from here: <a href="https://github.com/cyrus-and/gdb-dashboard" target="_blank" rel="noopener">https://github.com/cyrus-and/gdb-dashboard</a></li>
-<li>Demostration:<br>  <img src="http://i.imgur.com/6TIKXh0.png" alt></li>
-</ul><a id="more"></a>
-<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><ul>
-<li>put .gdbinit into home folder</li>
-<li>GDB dashboard requires at least GDB 7.7 compiled with Python 2.7</li>
-</ul>
-<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><ul>
-<li>inorder to use <ul>
-<li>gdb –args xrun *.v -tcl</li>
+<li>對於每個可能的石頭 X<ul>
+<li>取其與第 N 個石頭的距離為 K (stones[N] - stones[X])</li>
+<li>再往前考慮 是否能從第 Y 個石頭，(Y= 1, 2, 3…X-1），以跳躍 （K-1, K, K+1) 其中一種距離，跳到第 X 個石頭？<ul>
+<li>若是 stone[X] 與 stone[Y] 的距離是（K-1, K, K+1) 其中一個，則有可能，==進行遞迴==<ul>
+<li>將 X 代換為 Y</li>
+<li>將 K 代換為 stone[X] - stone[Y]</li>
+<li>遞迴停止條件：找到第 0 個石頭, 並且 K 為 1</li>
 </ul>
 </li>
-<li>command <code>dashboard</code> (or shorten as <code>da</code>) cause refresh of dashbaord</li>
-<li>command <code>help dashboard</code> </li>
+<li>若是 stone[X] 與 stone[Y] 的距離大於 K+1, 則不可能, 且比 Y 還要前面的石頭都不用考慮了(==剪枝==)</li>
 </ul>
+</li>
+</ul>
+</li>
+</ol><a id="more"></a>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//#define printf()</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">canReach</span><span class="params">(<span class="keyword">int</span>* stones, <span class="keyword">int</span> id, <span class="keyword">int</span> k)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">canCross</span><span class="params">(<span class="keyword">int</span>* stones, <span class="keyword">int</span> stonesSize)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> lastId = stonesSize - <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = lastId<span class="number">-1</span>; i&gt;=<span class="number">0</span> ; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"========================================\n"</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"starting: %d(%d)\n"</span>, i, stones[i]);</span><br><span class="line">        <span class="keyword">int</span> diff = stones[lastId] - stones[i];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>((diff) &lt;= (stones[i] + <span class="number">1</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(canReach(stones, i, diff)) <span class="keyword">return</span> <span class="literal">true</span>;    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">canReach</span><span class="params">(<span class="keyword">int</span>* stones, <span class="keyword">int</span> id, <span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"chk: %d(%d), k(%d)\n"</span>, id, stones[id], k);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>((id == <span class="number">0</span>) &amp;&amp; (k==<span class="number">1</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(i = id<span class="number">-1</span>; i&gt;=<span class="number">0</span> ; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> diff = stones[id] - stones[i];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>((diff &gt;= (k<span class="number">-1</span>)) &amp;&amp; (diff &lt;= (k+<span class="number">1</span>)))</span><br><span class="line">            <span class="keyword">return</span> canReach(stones, i, diff);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(diff &gt; k+<span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -330,7 +340,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/GDB/" rel="tag"># GDB</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
             
           </div>
         
@@ -340,15 +350,15 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
+                <a href="/2019/09/21/GDB-Dashboard/" rel="next" title="GDB Dashboard">
+                  <i class="fa fa-chevron-left"></i> GDB Dashboard
+                </a>
+              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/21/Leetcode-403-Frog-Jump/" rel="prev" title="Leetcode#403 Frog Jump">
-                  Leetcode#403 Frog Jump <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -406,7 +416,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Installation"><span class="nav-number">2.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-usage"><span class="nav-number">3.</span> <span class="nav-text">Basic usage</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#思路：-DFS-Prune"><span class="nav-number">1.</span> <span class="nav-text">思路： DFS + Prune</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">2.</span> <span class="nav-text">Code</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -549,9 +559,9 @@
 </script>
 <script>
   function disqus_config() {
-    this.page.url = "http://yoursite.com/2019/09/21/GDB-Dashboard/";
-    this.page.identifier = "2019/09/21/GDB-Dashboard/";
-    this.page.title = 'GDB Dashboard';};
+    this.page.url = "http://yoursite.com/2019/09/21/Leetcode-403-Frog-Jump/";
+    this.page.identifier = "2019/09/21/Leetcode-403-Frog-Jump/";
+    this.page.title = 'Leetcode#403 Frog Jump';};
   function loadComments() {
     if (window.DISQUS) {
       DISQUS.reset({
