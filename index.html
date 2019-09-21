@@ -252,7 +252,7 @@
                 
               
 
-              <time title="Created: 2019-09-21 15:10:26 / Modified: 16:07:12" itemprop="dateCreated datePublished" datetime="2019-09-21T15:10:26+08:00">2019-09-21</time>
+              <time title="Created: 2019-09-21 15:10:26 / Modified: 16:17:24" itemprop="dateCreated datePublished" datetime="2019-09-21T15:10:26+08:00">2019-09-21</time>
             </span>
           
             
@@ -298,27 +298,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="思路：-DFS-Prune"><a href="#思路：-DFS-Prune" class="headerlink" title="思路： DFS + Prune"></a>思路： DFS + Prune</h3><ol>
-<li>目標是跳到最後一個石頭 N</li>
-<li>假設最後一步是從第  X 個石頭 (X= 1, 2, 3…N-1） 跳到第 N 個石頭，是否有可能？<ul>
-<li>若 （第 N 個石頭與第 X 個石頭的距離差） &lt; （第 X 個石頭的位置），就有可能</li>
-</ul>
-</li>
-<li>對於每個可能的石頭 X<ul>
-<li>取其與第 N 個石頭的距離為 K (stones[N] - stones[X])</li>
-<li>再往前考慮 是否能從第 Y 個石頭，(Y= 1, 2, 3…X-1），以跳躍 （K-1, K, K+1) 其中一種距離，跳到第 X 個石頭？<ul>
-<li>若是 stone[X] 與 stone[Y] 的距離是（K-1, K, K+1) 其中一個，則有可能，==進行遞迴==<ul>
-<li>將 X 代換為 Y</li>
-<li>將 K 代換為 stone[X] - stone[Y]</li>
-<li>遞迴停止條件：找到第 0 個石頭, 並且 K 為 1</li>
-</ul>
-</li>
-<li>若是 stone[X] 與 stone[Y] 的距離大於 K+1, 則不可能, 且比 Y 還要前面的石頭都不用考慮了(==剪枝==)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
+          <p>Problem Link: <a href="https://leetcode.com/problems/frog-jump/" target="_blank" rel="noopener">https://leetcode.com/problems/frog-jump/</a></p>
           <!--noindex-->
           
             <div class="post-button text-center">
